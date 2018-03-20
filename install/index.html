@@ -195,7 +195,7 @@ python3 manage.py makemigrations &amp;&amp; python3 manage.py migrate 初始化�
 
 echo &quot;from core.models import Account;Account.objects.create_user(username='admin', password='Yearning_admin', group='admin',is_staff=1)&quot; | python3 manage.py shell 添加初始化用户
 
-echo &quot;from core.models import grained;grained.objects.get_or_create(username='admin', permissions={'ddl': '1', 'ddlcon': [], 'dml': '1', 'dmlcon': [], 'dic': '1', 'diccon': [], 'dicedit': '0', 'query': '1', 'querycon': [], 'user': '1', 'base': '1', 'dicexport': '0'})&quot; | python3 manage.py shell 初始化权限
+echo &quot;from core.models import grained;grained.objects.get_or_create(username='admin', permissions={'ddl': '1', 'ddlcon': [], 'dml': '1', 'dmlcon': [], 'dic': '1', 'diccon': [], 'dicedit': '0', 'query': '1', 'querycon': [], 'user': '1', 'base': '1', 'dicexport': '0','person': []})&quot; | python3 manage.py shell 初始化权限
 
 
 cp -rf Yearning/webpage/dist/* $NGINX_HOME/html/   复制编译好的静态文件到nginx html目录下(如自行更改Nginx静态路径地址则将静态文件复制到对应静态文件目录下)
